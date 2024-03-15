@@ -1,0 +1,7 @@
+org/jetbrains/assignment/Application.class
+controller/LocationController.class
+model/Movement.class
+model/Direction.class
+controller/LocationController$1.class
+model/Coordinate.class
+Service/LocationService.class
