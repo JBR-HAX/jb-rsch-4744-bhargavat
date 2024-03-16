@@ -1,4 +1,4 @@
-package model;
+package org.jetbrains.assignment.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,10 +1,11 @@
-package controller;
+package org.jetbrains.assignment.controller;
 
-import model.Coordinate;
-import model.Direction;
-import model.Movement;
+import org.jetbrains.assignment.model.Coordinate;
+import org.jetbrains.assignment.model.Direction;
+import org.jetbrains.assignment.model.Movement;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ import java.util.List;
 public class LocationController {
 
     @PostMapping(path = "/locations")
+    @ResponseBody
     public List<Coordinate> getLocations(@RequestBody List<Movement> moves) {
         Coordinate currCoordinate = new Coordinate(0,0);
         List<Coordinate> result = new ArrayList<>();
@@ -59,7 +61,7 @@ public class LocationController {
         List<Movement> moves = new ArrayList<>();
         Coordinate currCoord = new Coordinate(0,0);
         for (Coordinate coord : coordinates) {
-            Movement move = new Movement();
+            Movement move = new Movement(null,null);
             Direction dir = null;
             int deltaX = currCoord.getX() + coord.getX();
             int deltaY = currCoord.getY() + coord.getY();

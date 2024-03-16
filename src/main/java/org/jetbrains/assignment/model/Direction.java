@@ -1,4 +1,4 @@
-package model;
+package org.jetbrains.assignment.model;
 
 public enum Direction {
     EAST("EAST"),
